@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-OS | Aias Tatsis</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">AT</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link">&larr; All Projects</a>
+      <h1>AI-OS &mdash; GPU-Native Operating System</h1>
+      <div class="project-meta">
+        <span>Solo Developer</span>
+        <span>2024 &mdash; Present</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container project-detail">
+
+      <div class="project-detail-gallery">
+        <img src="../assets/img/aios1.png" alt="AI-OS Doom raycaster running on GPU">
+        <img src="../assets/img/aios2.png" alt="AI-OS Inspector showing DAG compute graph with node details">
+        <img src="../assets/img/aiosmine1.png" alt="AI-OS Minecraft voxel renderer with terrain and water">
+        <img src="../assets/img/aiosmine2.png" alt="AI-OS Inspector showing voxel raymarching DAG">
+      </div>
+
+      <div class="project-detail-body">
+        <h2>Overview</h2>
+        <p>AI-OS is an operating system where the graph is the computer. It replaces the traditional process/thread/syscall model with a single abstraction: a directed acyclic graph of content-addressed compute nodes, executed by a deterministic engine with hash-based incremental rebuild. Programs are compiled to graph IR, and the runtime decides how and where to execute them. The GPU is the target computer &mdash; the CPU's job is to compile, upload, and sleep.</p>
+
+        <h2>Why</h2>
+        <p>Operating systems haven't changed in 50 years. Processes, virtual memory, preemptive scheduling &mdash; all designed for CPUs that run sequential instructions. Modern compute is massively parallel, deterministic, and data-flow driven. AI-OS starts from that reality. Every program is a DAG. Every buffer is content-addressed. Every execution is incremental. The runtime knows exactly what changed, what depends on it, and what can be skipped.</p>
+
+        <h2>Architecture</h2>
+        <ul>
+          <li><strong>Ferrite Language:</strong> A declarative DSL for defining compute graphs. You describe the computation, not the execution order. 39 operations, shape inference, type validation, multi-file modules with imports/exports.</li>
+          <li><strong>Compiler:</strong> Lexer &rarr; parser &rarr; AST &rarr; two-pass compilation with shape inference. Constant folding, dead code elimination, op fusion.</li>
+          <li><strong>Graph IR:</strong> Append-only container of buffers and nodes. Immutable after freeze. Content-addressed via SHA-256.</li>
+          <li><strong>Rust Runtime:</strong> Entire execute loop in Rust via PyO3. CPU-side content-addressed dirty detection. CUDA Graphs collapse all kernel launches into a single ~3&micro;s replay.</li>
+          <li><strong>Custom CUDA Backend:</strong> NVRTC kernels + cuBLAS matmul + raw cuMemAlloc. Fully torch-free execution path.</li>
+          <li><strong>Inspector:</strong> Browser-based DAG visualizer with live execution status, node details, buffer values, and memory usage. Tabbed Display/Graph view over multiplexed WebSocket.</li>
+        </ul>
+
+        <h2>Performance</h2>
+        <ul>
+          <li><strong>Small MLP (worst case, all dirty):</strong> 1.60x faster than PyTorch &mdash; 1.9ms vs 3.1ms per step, loss parity &lt; 1e-6</li>
+          <li><strong>Large MLP (frozen layers):</strong> 2.19x faster than PyTorch &mdash; 3.9ms vs 8.5ms per step, content-addressed skip on unchanged subgraphs</li>
+          <li><strong>Doom Raycaster:</strong> 1900+ FPS on CUDA with CUDA Graphs (26-node DAG)</li>
+          <li><strong>Minecraft Voxel:</strong> 334 FPS at 640x480 (14-node DAG, 3D DDA through 8M voxels, 128 steps/ray)</li>
+        </ul>
+
+        <h2>Key Milestones</h2>
+        <ul>
+          <li>17+ milestones from core primitives to CUDA Graphs, GPU-resident scheduling, custom binary tensor format, and a full DSL language with modules</li>
+          <li>752 tests passing</li>
+          <li>Two complete demo applications: Wolfenstein-style Doom raycaster and Minecraft voxel world</li>
+        </ul>
+
+        <h2>Technologies</h2>
+        <div class="skill-tags">
+          <span>Python</span><span>Rust</span><span>CUDA</span><span>cuBLAS</span><span>NVRTC</span>
+          <span>PyO3</span><span>WebSocket</span><span>PyTorch</span><span>DAG Scheduling</span>
+          <span>Content-Addressed Storage</span><span>CUDA Graphs</span>
+        </div>
+
+        <h2>Links</h2>
+        <div class="project-links">
+          <a href="https://github.com/aiast1/aios" target="_blank" rel="noopener" class="btn btn-outline">GitHub Repository</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container"><p>&copy; 2026 Aias Tatsis</p></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

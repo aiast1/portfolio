@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cycloid - Healthcare from Above | Aias Tatsis</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">AT</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <div class="container">
+      <a href="../index.html#projects" class="back-link">&larr; All Projects</a>
+      <h1>Cycloid &mdash; Healthcare from Above</h1>
+      <div class="project-meta">
+        <span>Team Leader & Developer</span>
+        <span>2024</span>
+        <span>Samos, Greece</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container project-detail">
+      <div class="project-detail-gallery">
+        <img src="../assets/img/drone4.png" alt="Cycloid UAV in flight over island terrain">
+        <img src="../assets/img/cycloid-cfd.jpg" alt="Cycloid medication release mechanism render">
+        <img src="../assets/img/drone.png" alt="Cycloid drone design">
+        <img src="../assets/img/drone5.png" alt="Cycloid drone view">
+      </div>
+
+      <div class="project-detail-body">
+        <h2>Overview</h2>
+        <p>Cycloid is an emergency first-response UAV system designed for the island of Samos, where tourists and elderly residents often find themselves far from medical facilities. The project was inspired by a personal loss &mdash; the passing of a family member from cardiac arrest who might have been saved with faster medical response.</p>
+
+        <h2>The System</h2>
+        <ul>
+          <li><strong>Medical Payload:</strong> Equipped with a defibrillator (CellAED), oximeter, thermometer, ECG sensor, and emergency medications (insulin, atropine, cortisone, aerolin). Payload is configurable by medical staff.</li>
+          <li><strong>Real-Time Communication:</strong> 5G and IoT connectivity enables real-time video conferencing between doctor and patient, live transmission of vital signs and imagery.</li>
+          <li><strong>Remote Treatment:</strong> Doctors can remotely release medications (pills, pre-filled syringes) and provide guided first aid instructions through the UAV.</li>
+          <li><strong>Coverage Design:</strong> Three station deployment designed to cover the entire island of Samos effectively.</li>
+          <li><strong>Hardware:</strong> Designed in SolidWorks, 3D printed (FFF), with SpeedyBee F7 V3 flight controller and Arduino Nano ESP32 for IoT/sensor integration.</li>
+        </ul>
+
+        <h2>Research Basis</h2>
+        <p>The design followed ILCOR 2020 guidelines and the ABCDE emergency protocol. The team consulted with EKAV paramedics and local hospital doctors to determine optimal payload and communication requirements.</p>
+
+        <h2>Awards</h2>
+        <ul>
+          <li><strong>1st Place, Vodafone Generation Next 2024</strong> &mdash; Awarded an educational visit to CERN's Large Hadron Collider</li>
+        </ul>
+
+        <h2>Technologies</h2>
+        <div class="skill-tags">
+          <span>SolidWorks</span><span>3D Printing (FFF)</span><span>Arduino Nano ESP32</span>
+          <span>SpeedyBee F7</span><span>5G / IoT</span><span>Betaflight</span>
+          <span>DFRobot Sensors</span>
+        </div>
+
+        <h2>Resources</h2>
+        <div class="project-links">
+          <a href="../assets/pdf/frsr.pdf" target="_blank" class="btn btn-outline">Research Paper (FRSR)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container"><p>&copy; 2026 Aias Tatsis</p></div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

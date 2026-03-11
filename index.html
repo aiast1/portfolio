@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aias Tatsis | Engineer & Researcher</title>
+  <meta name="description" content="Aias Tatsis - Harvard EE student, Co-Founder of Acaysia, engineer, and researcher. Portfolio of projects in robotics, CFD, embedded systems, and more.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">AT</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm</p>
+      <h1 class="hero-name">Aias Tatsis</h1>
+      <p class="hero-tagline">Electrical Engineering @ Harvard &nbsp;|&nbsp; Co-Founder @ Acaysia</p>
+      <p class="hero-sub">Building adaptive control systems, simulation engines, and hardware that push boundaries.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="assets/pdf/resume.pdf" class="btn btn-outline" target="_blank">Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a student at <strong>Harvard University</strong> studying Electrical Engineering (B.S. expected 2029), with a background spanning adaptive ML control, embedded systems, computational fluid dynamics, and robotics.</p>
+          <p>As co-founder and technical lead at <strong>Acaysia</strong>, I build adaptive ML control algorithms for continuous-flow chemical reactors, digital-twin simulation frameworks, and hardware-in-the-loop control systems.</p>
+          <p>Previously, I led <strong>PiForce</strong> &mdash; a team that represented Greece at the Aramco F1 in Schools World Finals 2024, winning the Oracle Red Bull Racing Achievement Award. I've placed 3rd at EUCYS, 1st at Vodafone Generation Next, and received Gold at the FIRST Global Challenge.</p>
+        </div>
+        <div class="about-highlights">
+          <div class="highlight-card">
+            <span class="highlight-number">3rd</span>
+            <span class="highlight-label">EUCYS 2023</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">1st</span>
+            <span class="highlight-label">Vodafone Gen Next</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">Gold</span>
+            <span class="highlight-label">FIRST Global 2022</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-number">19.6/20</span>
+            <span class="highlight-label">Valedictorian GPA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <a href="projects/acaysia.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/acaysia.png" alt="Acaysia GPU multiphysics engine" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>ML Control</span><span>Digital Twin</span><span>Embedded</span>
+            </div>
+            <h3>Acaysia &mdash; Adaptive Reactor Control</h3>
+            <p>GPU multiphysics simulation engine and MPPI-based control system for continuous-flow chemical reactors.</p>
+          </div>
+        </a>
+
+        <a href="projects/aios.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/aiosmine1.png" alt="AI-OS Minecraft voxel renderer" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Rust</span><span>CUDA</span><span>GPU</span><span>DAG</span>
+            </div>
+            <h3>AI-OS &mdash; GPU-Native Operating System</h3>
+            <p>An OS where the graph is the computer. DAG-based execution, content-addressed caching, custom CUDA backend. 2.19x faster than PyTorch.</p>
+          </div>
+        </a>
+
+        <a href="projects/piforce.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/piforce-cfd1.webp" alt="CFD simulation of F1 car" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>CFD</span><span>FEA</span><span>CNC</span><span>MATLAB</span>
+            </div>
+            <h3>PiForce &mdash; F1 in Schools World Finals</h3>
+            <p>Led design of a miniature F1 car with Ansys CFD/FEA, custom CNC, and scientific simulator. World Finals 2024.</p>
+          </div>
+        </a>
+
+        <a href="projects/cycloid.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/drone4.png" alt="Cycloid emergency medical UAV" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>UAV</span><span>IoT</span><span>5G</span><span>Medical</span>
+            </div>
+            <h3>Cycloid &mdash; Healthcare from Above</h3>
+            <p>Emergency first-response UAV with medical instruments and real-time 5G doctor-patient communication.</p>
+          </div>
+        </a>
+
+        <a href="projects/archeo3d.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/archeo2.png" alt="3D printed archaeological artifacts" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>3D Scanning</span><span>Photogrammetry</span><span>Accessibility</span>
+            </div>
+            <h3>Archeo3D &mdash; Artifacts for the Visually Impaired</h3>
+            <p>Tactile 3D replicas of archaeological artifacts enabling cultural heritage access for the visually impaired.</p>
+          </div>
+        </a>
+
+        <a href="projects/avl.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/AVL.jpg" alt="AVL wearable assistive device" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>ML</span><span>Embedded</span><span>Wearable</span><span>Accessibility</span>
+            </div>
+            <h3>AVL &mdash; Adaptive Visual Learner</h3>
+            <p>Wearable assistive device with quantized ML object recognition running for a month on low power, helping visually impaired users navigate.</p>
+          </div>
+        </a>
+
+        <a href="projects/solar.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/HybridSolarThermoAtEXPO.jpg" alt="Solar-thermoelectric experiment at EUCYS" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Thermoelectric</span><span>Solar</span><span>Marine</span>
+            </div>
+            <h3>Hybrid Solar-Thermoelectric Power Generation</h3>
+            <p>Research on hybrid solar-thermoelectric systems in marine environments. Published in EJMER 2025. 3rd at EUCYS.</p>
+          </div>
+        </a>
+
+        <a href="projects/cansat.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/frsr2.png" alt="FRSR CanSat 3D render" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Search & Rescue</span><span>Embedded</span><span>Autonomous</span>
+            </div>
+            <h3>FRSR &mdash; First Response Search & Rescue</h3>
+            <p>Novel first response search and rescue system featuring a rectangular CanSat that lands and operates as an autonomous ground vehicle. Published in Journal of Student Research.</p>
+          </div>
+        </a>
+
+        <a href="projects/jetengine.html" class="project-card">
+          <div class="project-image">
+            <img src="assets/img/jeteng.png" alt="Hydrogen jet engine prototype" loading="lazy">
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Hydrogen</span><span>Propulsion</span><span>Combustion</span>
+            </div>
+            <h3>Hydrogen Jet Engine</h3>
+            <p>Jet engine prototype with on-board chemical hydrogen generation for clean propulsion.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section">
+    <div class="container">
+      <h2 class="section-title">Publications & Awards</h2>
+      <div class="publications-list">
+        <div class="pub-item">
+          <div class="pub-type">Journal</div>
+          <div class="pub-content">
+            <h4>Development and Evaluation of a Hybrid Solar-Thermoelectric Power Generation System in a Marine Environment</h4>
+            <p>European Journal of Mechanical Engineering Research, Vol 12, Issue 1, 2025</p>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-type">Journal</div>
+          <div class="pub-content">
+            <h4>A Novel First Response Search and Rescue (FRSR) System in Case of Disasters</h4>
+            <p>Journal of Student Research, Vol. 3, No 4, 2024</p>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-type">Case Study</div>
+          <div class="pub-content">
+            <h4>Driving Innovation at STEM Racing: How Ansys Powered Advanced Design</h4>
+            <p>Featured Ansys case study on PiForce's use of Fluent and Mechanical</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="subsection-title">Selected Awards</h3>
+      <div class="awards-grid">
+        <div class="award-item"><span class="award-place">3rd Place</span><strong>EUCYS 2023</strong> &mdash; European Union Contest for Young Scientists</div>
+        <div class="award-item"><span class="award-place">World Finals</span><strong>F1 in Schools 2024</strong> &mdash; Oracle Red Bull Racing Achievement Award</div>
+        <div class="award-item"><span class="award-place">1st Place</span><strong>Vodafone Generation Next 2024</strong> &mdash; Cycloid UAV System</div>
+        <div class="award-item"><span class="award-place">Gold</span><strong>FIRST Global Challenge 2022</strong> &mdash; National Robotics Team, Geneva</div>
+        <div class="award-item"><span class="award-place">1st Place</span><strong>Inventive Students 2024</strong> &mdash; Archeo3D</div>
+        <div class="award-item"><span class="award-place">1st Place</span><strong>F1 in Schools Greek Champions 2023</strong></div>
+        <div class="award-item"><span class="award-place">Excellence</span><strong>Aristotle Physics Competition 2022 & 2023</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span>Python</span><span>C++</span><span>MATLAB</span><span>JavaScript</span><span>Verilog HDL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>ML & Frameworks</h3>
+          <div class="skill-tags">
+            <span>TensorFlow</span><span>PyTorch</span><span>NumPy / Pandas</span><span>Reinforcement Learning</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Simulation</h3>
+          <div class="skill-tags">
+            <span>ANSYS Fluent</span><span>ANSYS Mechanical</span><span>Autodesk CFD</span><span>Simulink</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>CAD & Manufacturing</h3>
+          <div class="skill-tags">
+            <span>SolidWorks (CSWP)</span><span>Inventor</span><span>Fusion 360</span><span>CNC/CAM</span><span>3D Printing</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Embedded & Hardware</h3>
+          <div class="skill-tags">
+            <span>Arduino / ESP / STM32</span><span>Jetson</span><span>FPGA</span><span>ROS</span><span>IoT</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>3D & Visualization</h3>
+          <div class="skill-tags">
+            <span>Blender</span><span>Houdini</span><span>ZBrush</span><span>Unreal Engine 5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="contact-text">I'm always interested in collaborating on engineering and research projects.</p>
+      <div class="contact-links">
+        <a href="mailto:aiastatsis@college.harvard.edu" class="btn btn-primary">aiastatsis@college.harvard.edu</a>
+        <a href="https://www.linkedin.com/in/aias-tatsis" class="btn btn-outline" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Aias Tatsis</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
